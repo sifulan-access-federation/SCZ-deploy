@@ -116,6 +116,13 @@ services_ldap:
 #comanage_proxy_db_name: "cotosa"
 comanage_proxy_attribute: "cmuid"
 
+# Satosa attributes_hash database configuration
+# It is needed in the proxy_mysql and satosa role
+satosa_db: "{{ groups['proxy'][0] }}"
+satosa_db_name: "satosa"
+satosa_db_user: "satosa"
+
+
 db_host: "{{ groups['db'][0] }}"
 
 sbs_db_name: "sbs"

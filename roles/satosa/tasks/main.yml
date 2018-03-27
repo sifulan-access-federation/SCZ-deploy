@@ -153,6 +153,11 @@
       template:
         src: metainfo.yaml.j2
         dest: "{{ satosa_env_dir }}/plugins/micro_services/metainfo.yaml"
+ 
+    - name: Create attribute_check.yaml definition
+      template:
+        src: attribute_check.yaml.j2
+        dest: "{{ satosa_env_dir }}/plugins/micro_services/attribute_check.yaml"
 
     - name: Copy error and info pages to static alias directory
       copy:
@@ -163,6 +168,7 @@
         - error
         - access_denied
         - r_and_s_failed
+        - changed
 
     - name: Create MongoDB database satosa with collection clients
       shell: mongo satosa --quiet --eval "db.createCollection('clients')"
