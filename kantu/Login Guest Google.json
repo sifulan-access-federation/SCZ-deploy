@@ -1,0 +1,86 @@
+{
+  "Name": "Login Guest Google",
+  "CreationDate": "2018-11-27",
+  "Commands": [
+    {
+      "Command": "open",
+      "Target": "https://sp-test.test.scz.lab.surf.nl/",
+      "Value": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "link=SAML SP Test",
+      "Value": ""
+    },
+    {
+      "Command": "select",
+      "Target": "id=dropdownlist",
+      "Value": "label=SCZ Test Normal Proxy"
+    },
+    {
+      "Command": "click",
+      "Target": "id=dropdownlist",
+      "Value": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "//*[@id=\"content\"]/form/button",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=searchinput",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=searchinput",
+      "Value": "google"
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "//*[@id=\"ds-search-list\"]/div[1]/div/div[2]/h5",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=identifierId",
+      "Value": "bas.zoetekouw@gmail.com"
+    },
+    {
+      "Command": "type",
+      "Target": "id=identifierId",
+      "Value": "bas.zoetekouw@gmail.com"
+    },
+    {
+      "Command": "type",
+      "Target": "name=hiddenPassword",
+      "Value": "[redacted]"
+    },
+    {
+      "Command": "click",
+      "Target": "id=ui-id-9",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "//*[@id=\"identifierNext\"]/content",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "//*[@id=\"passwordNext\"]/content/span",
+      "Value": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "id=postLoginSubmitButton",
+      "Value": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "id=submit_ok",
+      "Value": ""
+    }
+  ]
+}

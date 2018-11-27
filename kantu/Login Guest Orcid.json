@@ -1,0 +1,76 @@
+{
+  "Name": "Login Guest Orcid",
+  "CreationDate": "2018-11-27",
+  "Commands": [
+    {
+      "Command": "open",
+      "Target": "https://sp-test.test.scz.lab.surf.nl/",
+      "Value": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "link=SAML SP Test",
+      "Value": ""
+    },
+    {
+      "Command": "select",
+      "Target": "id=dropdownlist",
+      "Value": "label=SCZ Test Normal Proxy"
+    },
+    {
+      "Command": "click",
+      "Target": "id=dropdownlist",
+      "Value": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "//*[@id=\"content\"]/form/button",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=searchinput",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=searchinput",
+      "Value": "orcid"
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "//*[@id=\"ds-search-list\"]/div/div/div[2]",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=userId",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=userId",
+      "Value": "bas@zoetekouw.net"
+    },
+    {
+      "Command": "type",
+      "Target": "id=password",
+      "Value": "[redacted]"
+    },
+    {
+      "Command": "click",
+      "Target": "id=ui-id-5",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=form-sign-in-button",
+      "Value": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "id=postLoginSubmitButton",
+      "Value": ""
+    }
+  ]
+}

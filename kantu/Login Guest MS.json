@@ -1,0 +1,91 @@
+{
+  "Name": "Login Guest MS",
+  "CreationDate": "2018-11-27",
+  "Commands": [
+    {
+      "Command": "open",
+      "Target": "https://sp-test.test.scz.lab.surf.nl/",
+      "Value": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "link=SAML SP Test",
+      "Value": ""
+    },
+    {
+      "Command": "select",
+      "Target": "id=dropdownlist",
+      "Value": "label=SCZ Test Normal Proxy"
+    },
+    {
+      "Command": "click",
+      "Target": "id=dropdownlist",
+      "Value": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "//*[@id=\"content\"]/form/button",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=searchinput",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=searchinput",
+      "Value": "microsoft"
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "//*[@id=\"ds-search-list\"]/div/div/div[2]/h5",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=i0116",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=i0116",
+      "Value": "bas.zoetekouw@surfnet.nl"
+    },
+    {
+      "Command": "type",
+      "Target": "id=i0118",
+      "Value": "[redacted]"
+    },
+    {
+      "Command": "click",
+      "Target": "//*[@id=\"i0281\"]/div/div[2]/div[1]",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=idSIButton9",
+      "Value": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "id=idSIButton9",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=idBtn_Back",
+      "Value": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "id=postLoginSubmitButton",
+      "Value": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "id=submit_ok",
+      "Value": ""
+    }
+  ]
+}

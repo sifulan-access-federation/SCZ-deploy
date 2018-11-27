@@ -1,0 +1,71 @@
+{
+  "Name": "Test-SP OIDC met SURFconext Test IdP student5",
+  "CreationDate": "2018-11-27",
+  "Commands": [
+    {
+      "Command": "open",
+      "Target": "https://sp-test.test.scz.lab.surf.nl/",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "/html/body",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "link=OIDC RP Test",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=searchinput",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=searchinput",
+      "Value": "SURFconext"
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "//*[@id=\"ds-search-list\"]/div[1]/div/div[2]/h5",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=username",
+      "Value": "student5"
+    },
+    {
+      "Command": "type",
+      "Target": "id=password",
+      "Value": "student5"
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "//*[@id=\"login\"]/input[@type=\"submit\"]",
+      "Value": ""
+    },
+    {
+      "Command": "sourceSearch",
+      "Target": "<p>CLAIM_",
+      "Value": "NUMCLAIMS"
+    },
+    {
+      "Command": "if",
+      "Target": "${NUMCLAIMS} != 7",
+      "Value": ""
+    },
+    {
+      "Command": "throwError",
+      "Target": "Too many attributes",
+      "Value": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": ""
+    }
+  ]
+}

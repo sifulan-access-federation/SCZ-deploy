@@ -1,0 +1,86 @@
+{
+  "Name": "Test-SP OIDC met test-IdP student",
+  "CreationDate": "2018-11-27",
+  "Commands": [
+    {
+      "Command": "open",
+      "Target": "https://sp-test.test.scz.lab.surf.nl/",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "/html/body",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "link=OIDC RP Test",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=searchinput",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=searchinput",
+      "Value": "scz"
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "//*[@id=\"ds-search-list\"]/div[2]/div/div[2]/h5",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=username",
+      "Value": "student"
+    },
+    {
+      "Command": "type",
+      "Target": "id=username",
+      "Value": "student"
+    },
+    {
+      "Command": "type",
+      "Target": "id=password",
+      "Value": "student"
+    },
+    {
+      "Command": "click",
+      "Target": "id=ui-id-5",
+      "Value": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "//*[@id=\"submit\"]/td[3]/button",
+      "Value": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "id=postLoginSubmitButton",
+      "Value": ""
+    },
+    {
+      "Command": "sourceSearch",
+      "Target": "<p>CLAIM_",
+      "Value": "NUMCLAIMS"
+    },
+    {
+      "Command": "if",
+      "Target": "${NUMCLAIMS} != 7",
+      "Value": ""
+    },
+    {
+      "Command": "throwError",
+      "Target": "Too many attributes",
+      "Value": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": ""
+    }
+  ]
+}

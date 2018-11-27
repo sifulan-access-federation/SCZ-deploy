@@ -1,0 +1,26 @@
+{
+  "Name": "eduGAIN IdPs zichtbaar",
+  "CreationDate": "2018-11-27",
+  "Commands": [
+    {
+      "Command": "open",
+      "Target": "https://comanage.test.scz.lab.surf.nl/registry/",
+      "Value": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "//*[@id=\"welcome-login-button\"]/span[2]",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=searchinput",
+      "Value": "cam.ac.uk"
+    },
+    {
+      "Command": "assertText",
+      "Target": "//*[@id=\"ds-search-list\"]//h5",
+      "Value": "University of Cambridge"
+    }
+  ]
+}

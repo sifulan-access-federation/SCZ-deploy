@@ -1,0 +1,76 @@
+{
+  "Name": "Test-SP SAML mirrored-idp+sp met test-IdP student",
+  "CreationDate": "2018-11-27",
+  "Commands": [
+    {
+      "Command": "open",
+      "Target": "https://sp-test.test.scz.lab.surf.nl/",
+      "Value": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "link=SAML SP Test",
+      "Value": ""
+    },
+    {
+      "Command": "select",
+      "Target": "id=dropdownlist",
+      "Value": "label=SCZ Test Mirrored Proxy Mirrored SP"
+    },
+    {
+      "Command": "click",
+      "Target": "id=dropdownlist",
+      "Value": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "//*[@id=\"content\"]/form/button",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=username",
+      "Value": "student"
+    },
+    {
+      "Command": "type",
+      "Target": "id=password",
+      "Value": "student"
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "//*[@id=\"submit\"]/td[3]/button",
+      "Value": ""
+    },
+    {
+      "Command": "sourceSearch",
+      "Target": "<td class=\"attrvalue\">",
+      "Value": "NUMATTR"
+    },
+    {
+      "Command": "if",
+      "Target": "${NUMATTR} != 4",
+      "Value": ""
+    },
+    {
+      "Command": "throwError",
+      "Target": "Too many attributes",
+      "Value": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "assertText",
+      "Target": "//*[@id=\"table_with_attributes\"]/tbody/tr[1]/td[2]",
+      "Value": "SCZ Test IdP"
+    },
+    {
+      "Command": "assertText",
+      "Target": "//*[@id=\"table_with_attributes\"]/tbody/tr[2]/td[2]",
+      "Value": "bar"
+    }
+  ]
+}

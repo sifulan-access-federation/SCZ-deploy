@@ -1,0 +1,51 @@
+{
+  "Name": "COmanage login test-idp student",
+  "CreationDate": "2018-11-27",
+  "Commands": [
+    {
+      "Command": "open",
+      "Target": "https://comanage.test.scz.lab.surf.nl/registry/",
+      "Value": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "//*[@id=\"welcome-login-button\"]/span[2]",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=searchinput",
+      "Value": "scz"
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "//*[@id=\"ds-search-list\"]/div[2]/div/div[2]/h5",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=username",
+      "Value": "student"
+    },
+    {
+      "Command": "type",
+      "Target": "id=password",
+      "Value": "student"
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "//*[@id=\"submit\"]/td[3]/button",
+      "Value": ""
+    },
+    {
+      "Command": "assertElementPresent",
+      "Target": "css=#content-inner > div > em.error",
+      "Value": ""
+    },
+    {
+      "Command": "assertElementPresent",
+      "Target": "//div[contains(*,'The identifier \"eppn_student@surfnet.nl|eptid_student@surfnet.nl\" is not registered')]",
+      "Value": "identifier"
+    }
+  ]
+}

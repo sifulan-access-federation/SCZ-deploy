@@ -1,0 +1,46 @@
+{
+  "Name": "Login Guest UnitedID",
+  "CreationDate": "2018-11-27",
+  "Commands": [
+    {
+      "Command": "open",
+      "Target": "https://sp-test.test.scz.lab.surf.nl/",
+      "Value": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "link=SAML SP Test",
+      "Value": ""
+    },
+    {
+      "Command": "select",
+      "Target": "id=dropdownlist",
+      "Value": "label=SCZ Test Normal Proxy"
+    },
+    {
+      "Command": "click",
+      "Target": "id=dropdownlist",
+      "Value": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "//*[@id=\"content\"]/form/button",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=searchinput",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=searchinput",
+      "Value": "unitedid"
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "//*[@id=\"ds-search-list\"]/div/div/div[2]",
+      "Value": ""
+    }
+  ]
+}
