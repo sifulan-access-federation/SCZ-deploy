@@ -15,8 +15,6 @@ class Selenium(unittest.TestCase):
         super(Selenium, self).__init__(method_name)
 
     def setUp(self):
-        self.test_result = None
-
         self.driver = webdriver.Firefox()
         self.driver.delete_all_cookies()
         self.driver.implicitly_wait(20)
@@ -24,7 +22,6 @@ class Selenium(unittest.TestCase):
     def tearDown(self):
         if self.driver.session_id:
             self.driver.quit()
-        pass
 
     # shortcut to select the idp with the specified entityid in the pyFf decivery screen
     def _wayf_select_idp(self, entityid, search_text=None, idp_name = None):
@@ -52,6 +49,7 @@ class Selenium(unittest.TestCase):
 
         idp_selector.click()
 
+    # shortcut method to login to the Test IdP with the provided credentials
     def _test_idp_login(self, username, password):
         d = self.driver
 
@@ -63,18 +61,23 @@ class Selenium(unittest.TestCase):
     def test_comanage_login_testidp(self):
         d = self.driver
 
+        # open COmanage and check that w eget the login page
         d.get(f'https://comanage.{self.base}/registry/')
         self.assertEqual("Home", self.driver.title)
         login_button = d.find_element_by_xpath('//*[@id="welcome-login"]')
         self.assertEqual("LOGIN", login_button.text)
         login_button.click()
 
+        # select Test IdP
         self._wayf_select_idp(self.test_idp_entityid, search_text='SCZ', idp_name=self.test_idp_name)
 
+        # login
         self._test_idp_login(self.test_idp_admin['user'], self.test_idp_admin['pass'])
 
+        # check that we are in the correct COmanage
         self.assertEqual("COmanage Registry", d.find_element_by_xpath('//*[@id="collaborationTitle"]').text)
         self.assertEqual(f'https://comanage.{self.base}/registry/', d.current_url)
+        # check that we have a "Platform" manu (i.e., that we are admin)
         self.assertEqual('Platform',
             d.find_element_by_xpath('//li[@class="platformMenu"]//*/*[@class="menuTitle"]').text)
 
