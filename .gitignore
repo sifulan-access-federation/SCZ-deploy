@@ -13,3 +13,5 @@ core
 .idea/
 secret
 ansible_key*
+ansible_key*
+geckodriver.log
