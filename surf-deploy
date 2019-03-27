@@ -36,6 +36,11 @@ then
     ENV=pilot
     EXTRA="${EXTRA} --ask-vault-pass"
     shift
+elif [ "$1" = "--eduteams" ]
+then
+    ENV=eduteams
+    EXTRA="${EXTRA} --ask-vault-pass"
+    shift
 elif [ "$1" = "--mgnt" ]
 then
     ENV=mgnt
