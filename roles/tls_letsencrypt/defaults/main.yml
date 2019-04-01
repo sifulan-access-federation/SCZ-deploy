@@ -9,7 +9,7 @@ letsencrypt:
 
 certbot:
   account_dir: "/etc/letsencrypt/accounts/{{'acme-staging.api.letsencrypt.org' \
-                if letsencrypt.use_staging else 'acme-v01.api.letsencrypt.org'}}"
+                if letsencrypt.use_staging else 'acme-v02.api.letsencrypt.org'}}"
   cert_dir: '/etc/letsencrypt/live'
   cert_pem: 'cert.pem'
   chain_pem: 'chain.pem'
