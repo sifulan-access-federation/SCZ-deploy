@@ -72,7 +72,7 @@
 
 - hosts:
     - proxy
-    - comanage3
+    - eduteams-comanage
   roles:
     - { role: proxy_mysql, tags: ['proxy','cotosa','mysql'] }
 
