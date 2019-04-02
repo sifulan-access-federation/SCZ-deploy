@@ -1,0 +1,2 @@
+---
+proxydb_backup_dir: "{{backup_base}}/proxy_db"

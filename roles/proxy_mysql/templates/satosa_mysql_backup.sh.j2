@@ -8,7 +8,7 @@ then
 	exit 1
 fi
 
-BACKUP_DIR="{{satosa_backup_dir}}"
+BACKUP_DIR="{{proxydb_backup_dir}}"
 BACKUP_FILE="$BACKUP_DIR/satosa_mysql_$(/bin/date +%Y-%m-%d_%H:%M)"
 
 mkdir -p -m 0755 "$BACKUP_DIR"
