@@ -1,8 +1,11 @@
 import unittest
 from time import sleep
+import os
+import datetime
 
 from selenium import webdriver
 from selenium.webdriver import ActionChains
+
 
 # generic class for SCZ tests
 # includes selenium setup and generic helper methods for common functionality
@@ -12,10 +15,13 @@ class SCZTest(unittest.TestCase):
         self.test_idp_entityid = f'https://idp-test.{self.base}/saml/saml2/idp/metadata.php'
         self.test_idp_name = "SCZ Test IdP"
         self.test_idp_admin = {"user": "baas", "pass": "baas"}
+        date_str = datetime.datetime.now().strftime('%Y%m%d_%H%M')
+        self.log_file = os.path.join(os.path.dirname(os.path.realpath(__file__)),
+                                     "..", "logs", f"selenium_firefox.{date_str}.log")
         super(SCZTest, self).__init__(method_name)
 
     def setUp(self):
-        self.driver = webdriver.Firefox()
+        self.driver = webdriver.Firefox(service_log_path=self.log_file)
         self.driver.delete_all_cookies()
         self.driver.implicitly_wait(20)
 
