@@ -45,10 +45,21 @@
 
 - name: create user for mysql with all privilege
   mysql_user:
-    name: "{{ comanage_proxy_db_user }}"
+    name: "{{ comanage_proxy_db_rw_user }}"
     host: "%"
-    password: "{{ comanage_proxy_db_password }}"
+    password: "{{ comanage_proxy_db_rw_password }}"
     priv: "{{ comanage_proxy_db_name }}.*:ALL"
+    state: present
+  notify:
+    - Restart MySQL
+  become: Yes
+
+- name: create user for mysql with ro-privs
+  mysql_user:
+    name: "{{ comanage_proxy_db_ro_user }}"
+    host: "%"
+    password: "{{ comanage_proxy_db_ro_password }}"
+    priv: "{{ comanage_proxy_db_name }}.*:SELECT"
     state: present
   notify:
     - Restart MySQL

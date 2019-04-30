@@ -41,8 +41,8 @@
           'datasource' => 'Database/Mysql',
           'persistent' => false,
           'host'       => '{{ comanage_proxy_db }}',
-          'login'      => '{{ comanage_proxy_db_user }}',
-          'password'   => '{{ comanage_proxy_db_password }}',
+          'login'      => '{{ comanage_proxy_db_rw_user }}',
+          'password'   => '{{ comanage_proxy_db_rw_password }}',
           'database'   => '{{ comanage_proxy_db_name }}',
           'prefix'     => '',
       );
