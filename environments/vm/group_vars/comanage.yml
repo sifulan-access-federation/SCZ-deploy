@@ -5,6 +5,8 @@ sp_protocol: "{{http_proto}}://"
 sp_hostname: "comanage.{{ domain }}"
 sp_home: "/registry"
 
+comanage_full_url: "{{ sp_protocol }}{{ sp_hostname }}"
+
 # Default values for the self-signed certificate are based on the certificate hostname
 sp_technical_contact_gn: "John"
 sp_technical_contact_sn: "Doe"
@@ -23,7 +25,6 @@ comanage_admin_family_name: "{{admin.sn}}"
 comanage_admin_username: "{{admin.eppn}}"
 comanage_email_from: "no-reply@{{domain}}"
 
-comanage_full_hostname: "{{ sp_hostname }}"
 
 comanage_scope: "{{base_domain}}"
 

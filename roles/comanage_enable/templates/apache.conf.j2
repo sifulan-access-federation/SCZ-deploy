@@ -3,8 +3,8 @@
 #######################################################################
 {% if comanage_port == 443 %}
 <VirtualHost *:80>
-    ServerName {{ comanage_full_hostname }}
-    Redirect / https://{{ comanage_full_hostname }}/
+    ServerName {{ sp_hostname }}
+    Redirect / {{ comanage_full_url }}
 </VirtualHost>
 {% endif %}
 
@@ -17,7 +17,7 @@
     # incoming connection and the protocol specified in
     # the SAML data
 #}
-    ServerName https://{{ comanage_full_hostname }}
+    ServerName {{ sp_hostname }}
     ServerAdmin {{ mail.admin_address }}
 
     DocumentRoot {{ comanage_root }}
@@ -84,7 +84,7 @@
         MellonDefaultLoginPath "{{ sp_home }}/"
 
         MellonSessionLength 86400
-        MellonNoCookieErrorPage "{{ comanage_full_hostname }}/no_cookie.html"
+        MellonNoCookieErrorPage "{{ comanage_full_url }}/no_cookie.html"
 
         MellonSPPrivateKeyFile {{ sp_key }}
         MellonSPCertFile {{ sp_certificate }}

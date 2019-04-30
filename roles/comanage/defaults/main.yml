@@ -13,7 +13,7 @@ comanage_tmp_dir: "/var/cache/comanage"
 # we publish in our certificate. Because of reverse proxy settings, this hostname
 # should include the https:// protocol as well, which allows us to recognise a
 # https:// request on port 80 as a valid regular request
-comanage_full_hostname: "{{http_proto}}://{{ sp_hostname }}"
+comanage_full_url: "{{http_proto}}://{{ sp_hostname }}"
 
 comanage_db_user: comanage
 comanage_db_password: changethispassword
