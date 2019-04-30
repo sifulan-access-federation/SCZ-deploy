@@ -90,8 +90,8 @@
   file:
     path: "/var/log/comanage"
     state: directory
-    owner: root
-    group: www-data
+    owner: www-data
+    group: root
     mode: 0775
 
 - name: Make a symlink to the new log dir
