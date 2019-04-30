@@ -124,6 +124,11 @@ listen proxy_{{host.hostname}}_{{host.frontend_port}}
 	timeout client 900s
 	timeout server 901s
 
+{% if host.acl is defined %}
+	acl acl_ip_{{host.hostname}}_{{host.frontend_port}} src 127.0.0.1 ::1 {{host.acl}}
+	tcp-request connection reject if !acl_ip_{{host.hostname}}_{{host.frontend_port}}
+{% endif %}
+
 	{% for be_server in host.backend_hosts -%}
 	server {{be_server}} {{be_server}}:{{host.backend_port}} check
 	{% endfor %}
