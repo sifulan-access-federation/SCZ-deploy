@@ -101,8 +101,8 @@ client_ldap:
 # Comanage-Proxy database configuration is here, because it is needed in both the
 # Proxy and Comanage groups.
 comanage_proxy_db: "{{ groups['proxy'][0] }}"
-comanage_proxy_db_rw_user: "scz"
-comanage_proxy_db_ro_user: "scz_ro"
+comanage_proxy_db_rw_user: "cotosa_comanage"
+comanage_proxy_db_ro_user: "cotosa_satosa"
 comanage_proxy_db_name: "cotosa"
 comanage_proxy_attribute: "cmuid"
 
