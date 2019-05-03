@@ -6,6 +6,7 @@
   compress
   compressoptions -9
   delaycompress
+  missingok
 }
 
 /var/log/lsc/lsc.ldif {
@@ -16,4 +17,5 @@
   compress
   compressoptions -9
   delaycompress
+  missingok
 }
