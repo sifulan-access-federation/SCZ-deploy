@@ -15,6 +15,7 @@ class SCZTest(unittest.TestCase):
         self.test_idp_entityid = f'https://idp-test.{self.base}/saml/saml2/idp/metadata.php'
         self.test_idp_name = "SCZ Test IdP"
         self.test_idp_admin = {"user": "baas", "pass": "baas"}
+        self.test_idp_student = {"user": "student", "pass": "student"}
         date_str = datetime.datetime.now().strftime('%Y%m%d_%H%M')
         self.log_file = os.path.join(os.path.dirname(os.path.realpath(__file__)),
                                      "..", "logs", f"selenium_firefox.{date_str}.log")
