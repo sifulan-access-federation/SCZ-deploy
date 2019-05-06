@@ -76,6 +76,10 @@
   roles:
     - { role: proxy_mysql, tags: ['proxy','cotosa','mysql'] }
 
+- hosts: eduteams-comanage
+  roles:
+    - { role: cotosa-api,          tags: ['cotosa-api'] }
+
 - hosts: client
   roles:
     - { role: client-base,          tags: ['client','client-base'  ] }
