@@ -17,6 +17,7 @@
 
         OIDCRedirectURI {{ sbs_base_url }}redirect_uri
         OIDCCryptoPassphrase randompassword
+        OIDCRemoteUserClaim cmuid
 
         WSGIDaemonProcess server user=www-data group=www-data threads=5
 
@@ -35,6 +36,9 @@
         </Directory>
 
         <LocationMatch ^/>
+           RewriteEngine On
+           RewriteCond %{REQUEST_FILENAME} !-f
+           RewriteRule ^ /index.html [QSA,L]
            OIDCUnAuthAction pass
            AuthType openid-connect
            Require valid-user
@@ -44,7 +48,6 @@
            OIDCUnAuthAction auth
            AuthType openid-connect
            Require valid-user
-           Redirect /login /
         </LocationMatch>
 
 </VirtualHost>
