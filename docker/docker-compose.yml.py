@@ -25,7 +25,7 @@ logical_hosts = [
 ]
 
 subnet = '172.20.1'
-domain = 'scz-vm.net'
+domain = 'aseanfilm.org'
 
 
 # generates config for a single host
@@ -41,7 +41,7 @@ def host_config(num: int, name: str) -> Dict:
     data['networks'    ] = {
         'scznet': {
             'ipv4_address': f'{subnet}.{num}',
-            'aliases':      [ f'{name}.vm.{domain}' ]
+            'aliases':      [ f'{name}.scz.{domain}' ]
         }
     }
     data['extra_hosts'] = [ f'{h}.{domain}:{subnet}.{hosts["lb"]}' for h in logical_hosts ]

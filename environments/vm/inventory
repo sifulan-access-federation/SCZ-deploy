@@ -5,31 +5,31 @@
 ##########################################
 # VM environment
 [vm_lb]
-lb.vm.scz-vm.net ansible_host=172.20.1.24
+lb.scz.aseanfilm.org ansible_host=172.20.1.24
 
 [vm_proxy]
-proxy.vm.scz-vm.net ansible_host=172.20.1.22
+proxy.scz.aseanfilm.org ansible_host=172.20.1.22
 
 #[vm_comanage]
-#comanage.vm.scz-vm.net ansible_host=172.20.1.21
+#comanage.scz.aseanfilm.org ansible_host=172.20.1.21
 
 [vm_ldap]
-ldap.vm.scz-vm.net ansible_host=172.20.1.20
+ldap.scz.aseanfilm.org ansible_host=172.20.1.20
 
 [vm_meta]
-meta.vm.scz-vm.net ansible_host=172.20.1.23
+meta.scz.aseanfilm.org ansible_host=172.20.1.23
 
 [vm_client]
-client.vm.scz-vm.net ansible_host=172.20.1.25
+client.scz.aseanfilm.org ansible_host=172.20.1.25
 
 [vm_sandbox1]
-sandbox1.vm.scz-vm.net ansible_host=172.20.1.26
+sandbox1.scz.aseanfilm.org ansible_host=172.20.1.26
 
 [vm_sbs]
-sbs.vm.scz-vm.net ansible_host=172.20.1.27
+sbs.scz.aseanfilm.org ansible_host=172.20.1.27
 
 [vm_db]
-db.vm.scz-vm.net ansible_host=172.20.1.28
+db.scz.aseanfilm.org ansible_host=172.20.1.28
 
 [vm:children]
 vm_lb
