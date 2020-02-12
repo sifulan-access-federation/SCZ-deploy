@@ -11,7 +11,7 @@ while : ; do
   if [ $? -ne 0 ]; then
     COUNTER=$((COUNTER+1))
     if [ $COUNTER -gt $MAXFAIL ]; then
-      echo "disable frontend ldap_ldap.scz-vm.net_63"       | socat stdio /run/haproxy/admin.sock
+      echo "disable frontend ldap_ldap.scz.aseanfilm.org_63"       | socat stdio /run/haproxy/admin.sock
 #       echo "disable frontend ldap_comanage.scz-vm.net_1636" | socat stdio /run/haproxy/admin.sock
       break
     fi
