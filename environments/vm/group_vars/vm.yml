@@ -4,8 +4,8 @@ sudo_groups:
 
 environment_name: vm
 environment_string: "SCZ VM"
-base_domain: "scz-vm.net"
-internal_base_domain: "vm.scz-vm.net"
+base_domain: "scz.aseanfilm.org"
+internal_base_domain: "vm.scz.aseanfilm.org"
 
 # externally visible!
 hostnames:
@@ -41,7 +41,7 @@ pam_clients_port: 8087
 meta_port: 80
 
 # COmanage-ldap configuration
-comanage_ldap_host: "ldap.vm.scz-vm.net"
+comanage_ldap_host: "ldap.vm.scz.aseanfilm.org"
 
 # TODO: get rid of hardcoded ports for proxy vhosts
 loadbalancer:

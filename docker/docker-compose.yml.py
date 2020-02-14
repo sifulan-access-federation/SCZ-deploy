@@ -44,6 +44,8 @@ def host_config(num: int, name: str) -> Dict:
             'aliases':      [ f'{name}.scz.{domain}' ]
         }
     }
+    if name == "sbs":
+       data['expose'] = [ '80:80', '443:443' ]
     data['extra_hosts'] = [ f'{h}.{domain}:{subnet}.{hosts["lb"]}' for h in logical_hosts ]
 
     return data
